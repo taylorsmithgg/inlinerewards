@@ -2,13 +2,12 @@ import play.PlayImport.PlayKeys
 import play.PlayScala
 import sbt._
 import Keys._
-import play.Play._
-import PlayKeys._
 
 object ApplicationBuild extends Build {
 
   val appName         = "integrate"
   val appVersion      = "2.1-SNAPSHOT"
+  fork := false
 
   val ivyLocal = Seq(
     Resolver.file("local Ivy", file(Path.userHome.absolutePath + "/.ivy2/local"))(Resolver.ivyStylePatterns)
@@ -35,6 +34,7 @@ object ApplicationBuild extends Build {
       "org.webjars" % "angular-ui-bootstrap" % "0.12.0",
       "junit"              % "junit"               % "4.8"         % "test"
     )
+
   )
 
 }
