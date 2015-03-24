@@ -23,8 +23,15 @@ class UserService
         deferred.promise
 
     createUser: (user) ->
-        @$log.debug "createUser #{angular.toJson(user, true)}"
         deferred = @$q.defer()
+
+        if(user.emailAlert?)
+          user.emailAlert = false
+
+        if(user.textAlert?)
+          user.textAlert = false
+
+        @$log.debug "createUser #{angular.toJson(user, true)}"
 
         @$http.post('/users', user)
         .success((data, status, headers) =>
@@ -37,11 +44,11 @@ class UserService
             )
         deferred.promise
 
-    updateUser: (firstName, lastName, user) ->
+    updateUser: (user) ->
       @$log.debug "updateUser #{angular.toJson(user, true)}"
       deferred = @$q.defer()
 
-      @$http.put("/user/#{firstName}/#{lastName}", user)
+      @$http.put("/users/#{user.id}", user)
       .success((data, status, headers) =>
               @$log.info("Successfully updated User - status #{status}")
               deferred.resolve(data)

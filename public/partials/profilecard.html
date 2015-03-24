@@ -1,28 +1,29 @@
+<a ng-href="/users/profile/{{ user.id }}">
 <div class="card hovercard">
     <div class="cardheader">
 
     </div>
     <div class="avatar">
-        <img alt="" src="http://lorempixel.com/100/100/people/9/">
+        <img alt="" src="http://www.vincegolangco.com/wp-content/uploads/2010/12/batman-for-facebook.jpg">
     </div>
     <div class="info">
         <div class="title">
-            <a href="http://scripteden.com/">{{ usr.points }}</a>
+            {{ user.points }}
         </div>
-        <div class="desc">{{ usr.firstName }} {{ usr.lastName }}</div>
-        <div class="desc">+ {{ usr.phone }}</div>
-        <div class="desc">{{ usr.email }}</div>
+        <div class="desc">{{ user.firstName }} {{ user.lastName }}</div>
+        <div class="desc">+ {{ user.phone }}</div>
+        <div class="desc"><a href="mailto:{{ user.email }}">{{ user.email }}</a></div>
     </div>
     <div class="bottom">
-        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/{{ user.twitter }}">
             <i class="fa fa-twitter"></i>
         </a>
         <a class="btn btn-danger btn-sm" rel="publisher"
-           href="https://plus.google.com/+ahmshahnuralam">
+           href="https://plus.google.com/{{ user.google }}">
             <i class="fa fa-google-plus"></i>
         </a>
         <a class="btn btn-primary btn-sm" rel="publisher"
-           href="https://plus.google.com/shahnuralam">
+           href="https://facebook.com/{{ user.facebook }}">
             <i class="fa fa-facebook"></i>
         </a>
         <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
@@ -30,3 +31,4 @@
         </a>
     </div>
 </div>
+</a>

@@ -43,7 +43,6 @@ class UserCtrl
           (data) =>
             @$log.debug "Promise returned #{data} User"
             @user = data
-            @$location.path("/")
         ,
           (error) =>
             @$log.error "Unable to create User: #{error}"

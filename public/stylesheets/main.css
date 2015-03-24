@@ -302,10 +302,6 @@ html { height: 100%;}
     width: 200px;
 }
 
-/*.jumbotron {*/
-    /*background: steelblue;*/
-/*}*/
-
 .custab{
     border: 1px solid #ccc;
     padding: 5px;
@@ -455,7 +451,7 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 .user-details {
-    background: #eee;
+    background: #121212;
     min-height: 333px;
 }
 
@@ -541,13 +537,6 @@ div.user-menu div.user-menu-content:not(.active){
         max-height: 400px;
     }
 }
-
-tr.hover {
-    cursor: pointer;
-    /* whatever other hover styles you want */
-}
-
-
 
 .card {
     padding-top: 20px;
@@ -792,4 +781,4 @@ tr.hover {
     margin-bottom: 17px;
 }
 
-.btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
+.card.hovercard .btn{ border-radius: 50%; width:32px; height:32px; line-height:18px;  }
