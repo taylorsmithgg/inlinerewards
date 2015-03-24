@@ -48,4 +48,13 @@ class UserCtrl
             @$log.error "Unable to create User: #{error}"
       )
 
+    open: () ->
+        modalInstance = $modal.open(
+          templateUrl: '/assets/partials/profile.html'
+          controller: 'ProfileCtrl'
+          size: size
+          resolve: items: ->
+            $scope.items
+          )
+
 controllersModule.controller('UserCtrl', UserCtrl)

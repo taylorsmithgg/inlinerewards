@@ -1,4 +1,4 @@
-<div ng-controller="UserCtrl as cuc">
+<div ng-controller="CreateUserCtrl as cuc">
     <h1>Create User</h1>
 
     <form id="CreateUserForm" name="CreateUserForm" class="form-horizontal" role="form"
@@ -45,7 +45,7 @@
             <label id="lbl_emailAlert" for="emailAlert" class="col-sm-4 control-label">Email Alerts</label>
 
             <div class="col-sm-8">
-                <input type="checkbox" checked="false" class="form-control" name="emailAlert" id="emailAlert" placeholder=""
+                <input type="checkbox" checked="false" name="emailAlert" id="emailAlert" placeholder=""
                        ng-model="cuc.user.emailAlert">
             </div>
         </div>
@@ -54,7 +54,7 @@
             <label id="lbl_textAlert" for="textAlert" class="col-sm-4 control-label">Text Alerts</label>
 
             <div class="col-sm-8">
-                <input type="checkbox" checked="false" class="form-control" name="textAlert" id="textAlert" placeholder=""
+                <input type="checkbox" checked="false" name="textAlert" id="textAlert" placeholder=""
                        ng-model="cuc.user.textAlert">
             </div>
         </div>

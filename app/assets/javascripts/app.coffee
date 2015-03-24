@@ -1,5 +1,6 @@
 dependencies = [
   'ngRoute',
+  'ui.bootstrap',
   'myApp.filters',
   'myApp.services',
   'myApp.controllers',

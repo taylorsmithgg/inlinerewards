@@ -7,6 +7,8 @@ object ApplicationBuild extends Build {
 
   val appName         = "integrate"
   val appVersion      = "2.1-SNAPSHOT"
+
+
   fork := false
 
   val ivyLocal = Seq(

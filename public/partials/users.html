@@ -46,7 +46,7 @@
                     <a href="mailto:{{ usr.email }}">{{ usr.email }}</a>
                 </td>
                 <td>
-                    <a ng-href="/#/users/edit/{{usr.firstName}}/{{usr.lastName}}" class="btn btn-success pull-right" id="btn_user_update">Edit User</a>
+                    <a ng-href="/#/users/edit/{{usr.id}}" class="btn btn-success pull-right" id="btn_user_update">Edit User</a>
                 </td>
                 <td>
                     <a ng-href="/" class="btn btn-danger pull-right" id="btn_user_delete" ng-click="uc.deleteUser(usr)">Delete User</a>

@@ -25,10 +25,10 @@ class UserService
     createUser: (user) ->
         deferred = @$q.defer()
 
-        if(user.emailAlert?)
+        if(!user.emailAlert?)
           user.emailAlert = false
 
-        if(user.textAlert?)
+        if(!user.textAlert?)
           user.textAlert = false
 
         @$log.debug "createUser #{angular.toJson(user, true)}"
