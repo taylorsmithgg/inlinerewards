@@ -1,12 +1,29 @@
 dependencies = [
   'ngRoute',
-  'ui.bootstrap',
+  'ngAnimate',
+  'mgcrea.ngStrap',
+#  'ui.bootstrap',
   'myApp.filters',
   'myApp.services',
   'myApp.controllers',
   'myApp.directives',
   'myApp.common',
   'myApp.routeConfig'
+]
+
+angular.module('ngAnimate', []).factory '$$animateReflow', [
+  '$window'
+  '$timeout'
+  ($window, $timeout) ->
+    requestAnimationFrame = $window.requestAnimationFrame or $window.webkitRequestAnimationFrame or (fn) ->
+      $timeout fn, 10, false
+    cancelAnimationFrame = $window.cancelAnimationFrame or $window.webkitCancelAnimationFrame or (timer) ->
+      $timeout.cancel timer
+    (fn) ->
+      id = requestAnimationFrame(fn)
+      ->
+        cancelAnimationFrame id
+        return
 ]
 
 app = angular.module('myApp', dependencies)

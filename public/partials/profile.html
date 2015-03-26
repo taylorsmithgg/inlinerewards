@@ -1,11 +1,12 @@
-<div class="row user-menu-container square" ng-controller="ProfileCtrl as pc">
+<!--<div class="modal">-->
+<div class="row user-menu-container square" ng-controller="ProfileCtrl">
     <div class="col-md-7 user-details">
         <div class="row custabbg white">
             <div class="col-md-6">
                 <div class="user-pad">
-                    <h3>{{ pc.user.firstName }} {{ pc.user.lastName }}</h3>
+                    <h3>{{ pc.user.firstName }} {{ user.lastName }}</h3>
                     <h4 class="white"><i class="fa fa-check-circle-o"></i></h4>
-                    <h4 class="white"><i class="fa fa-twitter"></i> {{ pc.user.twitter }}</h4>
+                    <h4 class="white"><i class="fa fa-twitter"></i> {{ user.twitter }}</h4>
                 </div>
             </div>
             <div class="col-md-6 no-pad">
@@ -17,7 +18,7 @@
         </div>
         <div class="row overview">
             <div class="col-md-2 no-pad">
-                <a class="btn btn-labeled btn-info" href="/users/edit/{{ pc.user.id }}">
+                <a class="btn btn-labeled btn-info" href="/users/edit/{{ user.id }}">
                             <span class="btn-label">
                                 <i class="fa fa-pencil"></i>
                             </span>Update
@@ -30,7 +31,7 @@
             </div>
             <div class="col-md-4 user-pad text-center">
                 <h3>POINTS</h3>
-                <h4>{{ pc.user.points }}</h4>
+                <h4>{{ user.points }}</h4>
             </div>
             <div class="col-md-4 user-pad text-center">
                 <!--<h3>FOLLOWING</h3>-->
@@ -65,13 +66,13 @@
             </h3>
             <ul class="user-menu-list custab">
                 <li>
-                    <i class="fa fa-user"></i> {{ pc.user.lastVisit }}
+                    <i class="fa fa-user"></i> {{ user.lastVisit }}
                 </li>
                 <li>
                     <i class="fa fa-heart"></i> History
                 </li>
                 <li>
-                    <i class="fa fa-paper-plane"></i><a href="mailto:{{ pc.user.email }}"> {{ pc.user.email}} </a>
+                    <i class="fa fa-paper-plane"></i><a href="mailto:{{ user.email }}"> {{ user.email}} </a>
                 </li>
                 <li>
                     <button type="button" class="btn btn-labeled btn-success" href="#">
@@ -169,3 +170,4 @@
         </div>
     </div>
 </div>
+<!--</div>-->

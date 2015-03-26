@@ -1,6 +1,6 @@
 class ProfileCtrl
 
-  constructor: (@$log, @$location, @$routeParams, @UserService) ->
+  constructor: (@$log, @$location, @$routeParams, @UserService, $scope) ->
     @$log.debug "constructing ProfileController"
     @user = {}
     @findUser()
@@ -32,6 +32,7 @@ class ProfileCtrl
         # find a user with the name of firstName and lastName
         # as filter returns an array, get the first object in it, and return it
         @user = (data.filter (user) -> user.id is id)[0]
+        @$log.debug "#{@user.firstName}"
     ,
       (error) =>
         @$log.error "Unable to get Users: #{error}"
