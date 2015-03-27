@@ -1,4 +1,5 @@
 $(document).ready ->
+
   trigger = $('.hamburger')
   overlay = $('.overlay')
   isClosed = false

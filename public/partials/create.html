@@ -1,4 +1,10 @@
+<script type="text/javascript">
+    $(document).onLoad(function() {
+        $('#textAlert').bootstrapSwitch('state', true);
+    };
+</script>
 <div ng-controller="CreateUserCtrl as cuc">
+
     <h1>Create User</h1>
 
     <form id="CreateUserForm" name="CreateUserForm" class="form-horizontal" role="form"
@@ -6,70 +12,89 @@
         <legend class="sm-col-12">Basic Information</legend>
 
         <div class="form-group">
-            <label id="lbl_firstName" for="firstName" class="col-sm-4 control-label">First Name</label>
+            <!--<label id="lbl_firstName" for="firstName" class="col-sm-4 control-label">First Name</label>-->
 
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="firstName" id="firstName" placeholder=""
+                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name"
                        ng-model="cuc.user.firstName">
             </div>
         </div>
 
         <div class="form-group">
-            <label id="lbl_lastName" for="lastName" class="col-sm-4 control-label">Last Name</label>
+            <!--<label id="lbl_lastName" for="lastName" class="col-sm-4 control-label">Last Name</label>-->
 
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="lastName" id="lastName" placeholder=""
+                <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name"
                        ng-model="cuc.user.lastName">
             </div>
         </div>
         
         <div class="form-group">
-            <label id="lbl_phone" for="phone" class="col-sm-4 control-label">Phone Number</label>
+            <!--<label id="lbl_phone" for="phone" class="col-sm-4 control-label">Phone Number</label>-->
 
             <div class="col-sm-8">
-                <input type="text" class="form-control" name="phone" id="phone" placeholder=""
+                <input type="text" class="form-control" name="phone" id="phone" placeholder="XXX-XXX-XXXX"
                        ng-model="cuc.user.phone">
             </div>
         </div>
         
         <div class="form-group">
-            <label id="lbl_email" for="email" class="col-sm-4 control-label">Email</label>
+            <!--<label id="lbl_email" for="email" class="col-sm-4 control-label">Email</label>-->
 
             <div class="col-sm-8">
-                <input type="email" class="form-control" name="email" id="email" placeholder=""
+                <input type="email" class="form-control" name="email" id="email" placeholder="john@doe.com"
                        ng-model="cuc.user.email">
             </div>
         </div>
         
         <div class="form-group">
-            <label id="lbl_emailAlert" for="emailAlert" class="col-sm-4 control-label">Email Alerts</label>
-
             <div class="col-sm-8">
-                <input type="checkbox" checked="false" name="emailAlert" id="emailAlert" placeholder=""
-                       ng-model="cuc.user.emailAlert">
+                <button class="btn btn-small btn-labeled btn-info btn-outline">
+                  <span class="btn-label">
+                      <i class="fa fa-envelope fa-2x"></i>
+                  </span>Email Alerts
+                </button>
+
+                <!--<input type="checkbox" checked="false" name="emailAlert" id="emailAlert"-->
+                       <!--ng-model="cuc.user.emailAlert">-->
+
+                <button class="btn btn-small btn-labeled btn-success btn-outline">
+                  <span class="btn-label">
+                      <i class="fa fa-mobile-phone fa-2x"></i>
+                  </span>Mobile Alerts
+                </button>
+
+                <!--<input type="checkbox" name="my-checkbox" id="textAlert"-->
+                       <!--ng-model="cuc.user.textAlert">-->
             </div>
         </div>
-        
-        <div class="form-group">
-            <label id="lbl_textAlert" for="textAlert" class="col-sm-4 control-label">Text Alerts</label>
 
-            <div class="col-sm-8">
-                <input type="checkbox" checked="false" name="textAlert" id="textAlert" placeholder=""
-                       ng-model="cuc.user.textAlert">
+        <div class="form-group">
+            <div class="col-sm-6 text-right">
+                <pre style="border: none; background: #FFF; font-weight: bold;">{{ cuc.user | json }}</pre>
             </div>
-        </div>
-
-        <pre>{{ cuc.user | json }}</pre>
-
-        <div class="form-group">
-            <div class="col-sm-offset-4 col-sm-8 text-right">
                 <a ng-href="/#/" id="btn_cancel" class="btn btn-warning">Cancel</a>
 
                 <button type="submit" class="btn btn-success" id="btn_create">Create User</button>
             </div>
         </div>
 
-
+        <!--<div class="control-group">-->
+            <!--<label class="control-label" for="notification1">Notification 1</label>-->
+            <!--<div class="controls">-->
+                <!--<div class="make-switch" tabindex="0">-->
+                    <!--<input id="notification1" type="checkbox">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="control-group">-->
+            <!--<label class="control-label" for="notification2">Notification 2</label>-->
+            <!--<div class="controls">-->
+                <!--<div class="make-switch" tabindex="0">-->
+                    <!--<input id="notification2" type="checkbox">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </form>
 </div>
 

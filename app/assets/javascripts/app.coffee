@@ -1,8 +1,8 @@
 dependencies = [
   'ngRoute',
-  'ngAnimate',
-  'mgcrea.ngStrap',
-#  'ui.bootstrap',
+#  'ngAnimate',
+#  'mgcrea.ngStrap',
+  'ui.bootstrap',
   'myApp.filters',
   'myApp.services',
   'myApp.controllers',
@@ -42,6 +42,8 @@ angular.module('myApp.routeConfig', ['ngRoute'])
     })
   .when('/users/profile/:id', {
       templateUrl: '/assets/partials/profile.html'
+      controller: 'ProfileCtrl'
+      controllerAs: 'pc'
     })
   .when('/users/edit', {
       templateUrl: '/assets/partials/users.html'

@@ -338,11 +338,10 @@ html { height: 100%;}
     color: #fff!important;
 }
 
-/* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */
+ /*-- The "User's Menu Container" specific elements. Custom container for the snippet -- */
 div.user-menu-container {
+    width: 100%;
     z-index: 10;
-    background-color: #fff;
-    margin-top: 20px;
     background-clip: padding-box;
     opacity: 0.97;
     filter: alpha(opacity=97);
@@ -373,6 +372,7 @@ div.user-menu-container .thumbnail {
 }
 
 /* -- Vertical Button Group -- */
+
 div.user-menu-container .btn-group-vertical {
     display: block;
 }
@@ -415,6 +415,8 @@ div.user-menu-btns div.btn-group-vertical>a.active:after{
 /* -- The main tab & content styling of the vertical buttons info-- */
 div.user-menu-content {
     color: #323232;
+    background: #FFF;
+    margin: 8%;
 }
 
 ul.user-menu-list {
@@ -450,6 +452,7 @@ div.user-menu div.user-menu-content:not(.active){
 }
 
 .user-details {
+    width: initial;
     background: #121212;
     min-height: 333px;
 }
@@ -803,4 +806,134 @@ div.user-menu div.user-menu-content:not(.active){
 
 .jumbotron accordion-heading{
     text-align: right;
+}
+
+.modal-custom {
+    margin: 10% auto;
+}
+
+.modal-content{
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.modal {
+    height: 100%;
+}
+
+.modal-sm {
+    width: 75%;
+    background: transparent;
+}
+
+*{
+    border-radius: 0 !important;
+    box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+
+* :after, :before {
+    box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Slideshow style */
+.splash {
+    position: fixed;
+    background: rgba(0,0,0,0.85);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    transition: opacity 0.5s, visibility 0s 0.5s;
+    -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.splash-open.splash {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.splash .splash-inner {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: translate3d(0,0,150px);
+    transform: translate3d(0,0,150px);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+}
+
+
+.splash-open.splash .splash-inner {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.splash .splash-content {
+    width: 660px;
+    height: 350px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin: -175px 0 0 -330px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.splash-content h1 {
+    color: #fff;
+    /*margin-bottom: 40px;*/
+}
+
+
+.btn-outline {
+    margin-top: 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    font-weight: 300;
+}
+.btn-outline:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-success.btn-outline,
+.btn-info.btn-outline {
+    margin-top: 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    background-color: transparent;
+    font-weight: 300;
+}
+
+.btn-success.btn-outline:hover{
+    background: #5cb85c;
+}
+
+.btn-info.btn-outline:hover{
+    background: #5bc0de;
+}
+
+.control-label {
+    text-align: left !important;
 }

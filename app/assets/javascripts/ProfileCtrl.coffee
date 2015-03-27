@@ -3,6 +3,7 @@ class ProfileCtrl
   constructor: (@$log, @$location, @$routeParams, @UserService, $scope) ->
     @$log.debug "constructing ProfileController"
     @user = {}
+    @$scope = $scope
     @findUser()
 
   updateUser: () ->
@@ -32,6 +33,7 @@ class ProfileCtrl
         # find a user with the name of firstName and lastName
         # as filter returns an array, get the first object in it, and return it
         @user = (data.filter (user) -> user.id is id)[0]
+        @$scope.user = @user
         @$log.debug "#{@user.firstName}"
     ,
       (error) =>
