@@ -1,7 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
 body {
     position: relative;
     overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    background: #ededed;
 }
+
 body,
 html { height: 100%;}
 .nav .open > a,
@@ -794,6 +799,7 @@ div.user-menu div.user-menu-content:not(.active){
 .jumbotron {
     border-radius: 0 !important;
     text-align: center;
+    background: #FFF;
 }
 
 .jumbotron accordion{
@@ -836,12 +842,6 @@ div.user-menu div.user-menu-content:not(.active){
 * :after, :before {
     box-sizing: content-box !important;
     -webkit-box-sizing: content-box !important;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Lato);
-
-body {
-    font-family: 'Lato', sans-serif;
 }
 
 /* Slideshow style */
@@ -936,4 +936,8 @@ body {
 
 .control-label {
     text-align: left !important;
+}
+
+.img-responsive {
+    border-radius: 25%;
 }
