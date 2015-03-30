@@ -51,6 +51,7 @@ class UserService
       @$http.put("/users/#{user.id}", user)
       .success((data, status, headers) =>
               @$log.info("Successfully updated User - status #{status}")
+              @$log.debug(user)
               deferred.resolve(data)
             )
       .error((data, status, header) =>
@@ -73,5 +74,20 @@ class UserService
           deferred.reject(data)
         )
         deferred.promise
+
+    getUser: (id) ->
+      @$log.debug "getUser: #{id}"
+      deferred = @$q.defer()
+
+      @$http.get("/users/#{id}")
+      .success((data, status, headers) =>
+        @$log.info("Successfully retrieved User - status #{status}")
+        deferred.resolve(data)
+      )
+      .error((data, status, header) =>
+        @$log.error("Failed to retrieve user - status #{status}")
+        deferred.reject(data)
+      )
+      deferred.promise
 
 servicesModule.service('UserService', UserService)

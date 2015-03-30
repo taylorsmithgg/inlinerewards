@@ -5,7 +5,7 @@
 </script>
 <div ng-controller="CreateUserCtrl as cuc">
 
-    <h1>Create User</h1>
+    <legend class="sm-col-12">Create User</legend>
 
     <div class="container">
         <div class="row clearfix">
@@ -45,12 +45,12 @@
                     <div class="form-group col-sm-10">
                             <button class="btn btn-small btn-labeled btn-info" btn-checkbox ng-model="cuc.user.emailAlert">
                                 <span class="btn-label">
-                                <i class="fa fa-envelope fa-2x"></i>
+                                <i class="fa fa-envelope"></i>
                                 </span>Email Alerts
                             </button>
-                            <button class="btn btn-small btn-labeled btn-success" btn-checkbox ng-model="cuc.user.textAlert">
+                            <button class="btn btn-small btn-labeled btn-success" style="margin-top: 10px;" btn-checkbox ng-model="cuc.user.textAlert">
                                 <span class="btn-label">
-                                <i class="fa fa-mobile-phone fa-2x"></i>
+                                <i class="fa fa-mobile-phone"></i>
                                 </span>Mobile Alerts
                             </button>
                     </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="col-md-4 column">
             </div>
-            <div class="col-md-4 column">
+            <div class="col-md-7 column">
                 <pre style="border: none; background: #FFF; font-weight: bold;">{{ cuc.user | json }}</pre>
             </div>
         </div>

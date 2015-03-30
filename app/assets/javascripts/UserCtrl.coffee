@@ -78,8 +78,17 @@ class UserCtrl
     )
 
     # Show when some event occurs (use $promise property to ensure the template has been loaded)
-    showModal: (index)->
-      @$scope.user = @users[index]
+    showModal: (userID)->
+      console.log("User ID: " + userID)
+      @UserService.getUser(userID)
+      .then(
+        (data) =>
+          @$log.debug "Promise returned #{data} User"
+          @$scope.user = data
+        ,
+          (error) =>
+            @$log.error "Unable to retrieve User: #{error}"
+      )
       @myOtherModal = @$modal.open(
         templateUrl: 'splash/content.html'
         windowTemplateUrl: 'splash/index.html'

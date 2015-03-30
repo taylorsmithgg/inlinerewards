@@ -12,7 +12,7 @@
         <div class="row"
              ng-show="(filteredData = (uc.users | filter:searchText)) && searchText.length >= 2 && filteredData.length >= 1">
             <div class="col-md-3" ng-repeat="user in filteredData"
-                 ng-include="'/assets/partials/profilecard.html'" data-animation="am-fade-and-scale" data-placement="center" ng-animate-children="fade-animation" ng-click="uc.showModal($index)"></div>
+                 ng-include="'/assets/partials/profilecard.html'"></div>
         </div>
         <div class="col-md-12" ng-show="filteredData.length == 0"><p class="text-center">No Users Found</p></div>
 
